@@ -1,67 +1,92 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>تتت</title>
+  <title>تبلیغاتی سمکو</title>
   <style>
     body {
       font-family: Tahoma, sans-serif;
-      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'50'%20height%3D'50'%3E%3Ctext%20x%3D'0'%20y%3D'35'%20font-size%3D'30'%20opacity%3D'0.8'%3E%F0%9F%8C%B9%3C%2Ftext%3E%3C%2Fsvg%3E"); background-repeat: repeat;
-      direction: rtl;
-      padding: 20px;
       text-align: center;
+      background-color: #f5f5f5;
+      padding: 30px;
     }
-    .icons {
+    h1 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .logos {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
       flex-wrap: wrap;
-      margin: 20px 0;
+      margin-top: 20px;
     }
-    .footer {
-      font-size: 0.8em;
-      color: #555;
+    .logos img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+    .address {
+      font-size: 18px;
+      color: #333;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    .video-container {
+      max-width: 640px;
+      margin: 0 auto;
+      background-color: #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .footer-text {
+      font-size: 12px;
+      color: #888;
       margin-top: 30px;
     }
   </style>
 </head>
 <body>
-  
-    <h1>تتت</h1>
-    
-        <div class="icons">
-          <a href="https://instagram.com/" target="_blank">📷 اینستاگرام</a>
-          <a href="https://t.me/" target="_blank">📨 تلگرام</a>
-          <a href="https://wa.me/" target="_blank">💬 واتساپ</a>
-          <a href="tel:">📞 تماس</a>
-        </div>
-    <div>اا</div>
-    
-        <div id="gallery" style="margin:20px auto; max-width:600px;">
-          <img id="galleryImage" src="image1.jpg" alt="گالری" style="width:100%; height:auto; border:2px solid #ccc;">
-          <div style="margin-top:10px;">
-            <button onclick='prevImage()'>◀ قبلی</button>
-            <button onclick='nextImage()'>بعدی ▶</button>
-          </div>
-        </div>
-        <script>
-          const images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
-          let currentIndex = 0;
-          function showImage(index) {
-            const img = document.getElementById('galleryImage');
-            img.src = images[index];
-          }
-          function nextImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage(currentIndex);
-          }
-          function prevImage() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            showImage(currentIndex);
-          }
-        </script>
-      
-  
-  <div class="footer">ساخته شده در تبلیغاتی سمکو</div>
+
+  <h1>تبلیغاتی سمکو</h1>
+
+  <div class="logos">
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="instagram.png" alt="Instagram">
+    </a>
+    <a href="https://telegram.me" target="_blank">
+      <img src="telegram.png" alt="Telegram">
+    </a>
+    <a href="https://wa.me/1234567890" target="_blank">
+      <img src="whatsapp.png" alt="WhatsApp">
+    </a>
+    <a href="tel:+1234567890">
+      <img src="phone.png" alt="Phone">
+    </a>
+  </div>
+
+  <div class="address">
+    آدرس: استان کردستان - شهرستان سقز - خیابان آزادی - کوچه یک - پلاک 2
+  </div>
+
+  <div class="video-container">
+    <video controls>
+      <source src="your-video.mp4" type="video/mp4">
+      مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+    </video>
+  </div>
+
+  <div class="footer-text">
+    ساخته شده در تبلیغاتی سمکو
+  </div>
+
 </body>
-</html>  
+</html>
