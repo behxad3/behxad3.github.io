@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>پارچه سرای آگاه</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background-color: #87CEEB; opacity: 0.6;
+      direction: rtl;
+      padding: 20px;
+      text-align: center;
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .footer {
+      font-size: 0.8em;
+      color: #555;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  
+    <h1>پارچه سرای آگاه</h1>
+    
+        <div class="icons">
+          <a href="https://instagram.com/parchesara.agah" target="_blank">📷 اینستاگرام</a>
+          <a href="https://t.me/parche_agah" target="_blank">📨 تلگرام</a>
+          <a href="https://wa.me/989187851434" target="_blank">💬 واتساپ</a>
+          <a href="tel:09187851434">📞 تماس</a>
+        </div>
+    <div>📍 آدرس: استان کردستان - شهرستان سقز - میدان آزادی - پاساژ الماس غرب طبقه منفی۲</div>
+    
+        <div id="gallery" style="margin:20px auto; max-width:600px;">
+          <img id="galleryImage" src="image1.jpg" alt="گالری" style="width:100%; height:auto; border:2px solid #ccc;">
+          <div style="margin-top:10px;">
+            <button onclick='prevImage()'>◀ قبلی</button>
+            <button onclick='nextImage()'>بعدی ▶</button>
+          </div>
+        </div>
+        <script>
+          const images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
+          let currentIndex = 0;
+          function showImage(index) {
+            const img = document.getElementById('galleryImage');
+            img.src = images[index];
+          }
+          function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+          }
+          function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+          }
+        </script>
+      
+  
+  <div class="footer">ساخته شده در تبلیغاتی سمکو</div>
+</body>
+</html>
