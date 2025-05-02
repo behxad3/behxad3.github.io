@@ -1,229 +1,155 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>پارچه سرای آگاه</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            /* پس‌زمینه نقاط کم‌رنگ */
-            background-color: #fff9f5;
-            background-image: radial-gradient(#ffd6c7 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            border-radius: 10px;
-        }
-        
-        .header {
-            margin-bottom: 2cm;
-        }
-        
-        h1 {
-            font-size: 3rem;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-weight: 700;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-        
-        .gallery {
-            position: relative;
-            margin-bottom: 1.5cm;
-        }
-        
-        .gallery-frame {
-            width: 80%;
-            height: 400px;
-            margin: 0 auto;
-            overflow: hidden;
-            border: 15px solid #fff;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            border-radius: 5px;
-            position: relative;
-        }
-        
-        .gallery-slides {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.5s ease;
-        }
-        
-        .gallery-slide {
-            min-width: 100%;
-            height: 100%;
-        }
-        
-        .gallery-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .gallery-controls {
-            margin-top: 20px;
-        }
-        
-        .gallery-btn {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            margin: 0 10px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .gallery-btn:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-        
-        .gallery-btn:disabled {
-            background-color: #bdc3c7;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-        
-        .social-icons {
-            margin-bottom: 1.5cm;
-        }
-        
-        .social-icon {
-            display: inline-block;
-            margin: 0 15px;
-            width: 50px;
-            height: 50px;
-            transition: all 0.3s ease;
-        }
-        
-        .social-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        
-        .social-icon:hover {
-            transform: scale(1.1);
-        }
-        
-        .address {
-            font-size: 1.5rem;
-            line-height: 1.6;
-            color: #34495e;
-            font-weight: 500;
-            margin-bottom: 3cm; /* فاصله 3 سانت برای کپی رایت */
-        }
-        
-        .copyright {
-            font-size: 0.8rem;
-            color: #888;
-            margin-top: 3cm;
-            padding-top: 10px;
-            border-top: 1px solid #eee;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>پارچه سرای آگاه</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: radial-gradient(circle, #e0f0ff 3px, transparent 3px);
+      background-size: 40px 40px;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5rem;
+      color: #2a2a2a;
+    }
+
+    .slider-container {
+      margin-top: 2cm;
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      background: white;
+    }
+
+    .slider-image {
+      width: 100%;
+      display: block;
+    }
+
+    .slider-buttons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .slider-buttons button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      background-color: #1976d2;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    .slider-buttons button:hover {
+      background-color: #1565c0;
+    }
+
+    .social-icons {
+      margin-top: 2cm;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icons img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .address {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #333;
+      padding: 0 15px;
+    }
+
+    .footer {
+      margin-top: 3cm;
+      font-size: 0.8rem;
+      color: gray;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>پارچه سرای آگاه</h1>
-        </div>
-        
-        <div class="gallery">
-            <div class="gallery-frame">
-                <div class="gallery-slides">
-                    <div class="gallery-slide">
-                        <img src="images/image1.jpg" alt="نمونه پارچه 1">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="images/image2.jpg" alt="نمونه پارچه 2">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="images/image3.jpg" alt="نمونه پارچه 3">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-controls">
-                <button class="gallery-btn" id="prevBtn">عکس قبلی</button>
-                <button class="gallery-btn" id="nextBtn">عکس بعدی</button>
-            </div>
-        </div>
-        
-        <div class="social-icons">
-            <a href="https://www.instagram.com/parchesara.agah" class="social-icon" target="_blank">
-                <img src="images/instagram.png" alt="اینستاگرام">
-            </a>
-            <a href="https://t.me/parche_agah" class="social-icon" target="_blank">
-                <img src="images/telegram.png" alt="تلگرام">
-            </a>
-            <a href="https://wa.me/989187851434" class="social-icon" target="_blank">
-                <img src="images/whatsapp.png" alt="واتساپ">
-            </a>
-            <a href="tel:09187851434" class="social-icon">
-                <img src="images/phone.png" alt="تلفن">
-            </a>
-        </div>
-        
-        <div class="address">
-            <p>📍 آدرس: استان کردستان - شهرستان سقز - میدان آزادی - پاساژ الماس غرب طبقه منفی۲</p>
-        </div>
-        
-        <div class="copyright">
-            ساخته شده در تبلیغاتی سمکو
-        </div>
-    </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelector('.gallery-slides');
-            const slidesCount = document.querySelectorAll('.gallery-slide').length;
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            let currentIndex = 0;
-            
-            function updateButtons() {
-                prevBtn.disabled = currentIndex === 0;
-                nextBtn.disabled = currentIndex === slidesCount - 1;
-            }
-            
-            function goToSlide(index) {
-                if (index < 0 || index >= slidesCount) return;
-                
-                currentIndex = index;
-                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-                updateButtons();
-            }
-            
-            prevBtn.addEventListener('click', function() {
-                goToSlide(currentIndex - 1);
-            });
-            
-            nextBtn.addEventListener('click', function() {
-                goToSlide(currentIndex + 1);
-            });
-            
-            // Initialize buttons
-            updateButtons();
-        });
-    </script>
+  <h1>پارچه سرای آگاه</h1>
+
+  <div class="slider-container">
+    <img id="sliderImage" class="slider-image" src="images/image1.jpg" alt="slider image">
+  </div>
+  <div class="slider-buttons">
+    <button onclick="prevImage()">قبلی</button>
+    <button onclick="nextImage()">بعدی</button>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://t.me/parche_agah" target="_blank">
+      <img src="images/telegram.png" alt="Telegram">
+    </a>
+    <a href="https://www.instagram.com/parchesara.agah" target="_blank">
+      <img src="images/instagram.png" alt="Instagram">
+    </a>
+    <a href="https://wa.me/989187851434" target="_blank">
+      <img src="images/whatsapp.png" alt="WhatsApp">
+    </a>
+    <a href="tel:09187851434">
+      <img src="images/phone.png" alt="Phone">
+    </a>
+  </div>
+
+  <div class="address">
+    📍 آدرس: استان کردستان - شهرستان سقز - میدان آزادی - پاساژ الماس غرب طبقه منفی۲
+  </div>
+
+  <div class="footer">
+    ساخته شده در تبلیغاتی سمکو
+  </div>
+
+  <script>
+    const images = [
+      "images/image1.jpg",
+      "images/image2.jpg",
+      "images/image3.jpg"
+    ];
+
+    let currentImageIndex = 0;
+    const sliderImage = document.getElementById("sliderImage");
+
+    function showImage(index) {
+      sliderImage.src = images[index];
+    }
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      showImage(currentImageIndex);
+    }
+
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+      showImage(currentImageIndex);
+    }
+  </script>
+
 </body>
 </html>
